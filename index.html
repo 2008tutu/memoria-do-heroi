@@ -7,31 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory game</title>
     <!-- Styles -->
+    <link rel="stylesheet" href="css/board.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- Scripts -->
+    <script src="scripts/card.js" defer></script>
+    <script src="scripts/board.js" defer></script>
     <script src="scripts/main.js" defer></script>
 </head>
 <body>
-    <!-- menu -->
+    <!-- Templates -->
+    <template id="cardTemplate">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front"></div>
+                <div class="flip-card-back"><img src="images/heros/card01.jpeg"></div>
+            </div>
+        </div>
+    </template>
+    <!-- Board -->
+    <div id="board" class="hidden"></div>
+    <!-- Menu -->
     <div id="menu">
         <h1>Memória do herói</h1>
         <div class="container">
             <select name="numCards" id="numCards"></select>
+            
+                 <!-- From Uiverse.io by adamgiebl --> 
+                <button id="start" class="cssbuttons-io">
+                    <span
+                    ><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                        d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                        fill="currentColor"
+                        ></path>
+                    </svg>
+                    start</span
+                    >
+                </button>
+        
+                </div>
+            </div>
 
-            <!-- From Uiverse.io by adamgiebl --> 
-<button id="start" class="cssbuttons-io">
-    <span
-      ><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0h24v24H0z" fill="none"></path>
-        <path
-          d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
-          fill="currentColor"
-        ></path>
-      </svg>
-      start</span
-    >
-  </button>
-  
+
         </div>
     </div>
     
